@@ -10,6 +10,7 @@ __pycache__/
 .Python
 build/
 enviroment
+faiss_index_ancient_greece
 develop-eggs/
 dist/
 downloads/
