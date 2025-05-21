@@ -1,0 +1,10 @@
+[
+    {
+        "question": "Who is Socrates?",
+        "expected_answer": "Socrates was a classical Greek philosopher credited as one of the founders of Western philosophy."
+    },
+    {
+        "question": "What is the Peloponnesian War?",
+        "expected_answer": "A war between Athens and Sparta that lasted from 431 to 404 BCE."
+    }
+]
