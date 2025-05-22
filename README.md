@@ -135,6 +135,40 @@ To deploy your own version:
 
 ---
 
+## 📊 Evaluation
+
+The chatbot’s answers are rigorously evaluated using both classic NLP metrics and LLM-based criteria:
+
+### 1. **Automatic Metrics**
+- **Cosine Similarity (TF-IDF):** Measures textual similarity between the chatbot’s answer and the expected answer.
+- **BLEU:** Evaluates n-gram overlap for fluency and relevance.
+- **ROUGE:** Assesses recall and precision of overlapping phrases.
+- **METEOR:** Considers synonymy and word order.
+- **BERTScore:** Uses contextual embeddings for semantic similarity.
+
+### 2. **LLM-Based Evaluation**
+- **Faithfulness:** Does the answer accurately reflect the information present in the provided context?
+- **Context Faithfulness:** Is the answer faithful to the retrieved context and does not introduce information not present in the context?
+- **Relevance:** Judges if the answer is relevant to the question.
+- **Truthfulness:** Assesses factual correctness using a language model.
+
+### **How Evaluation Works**
+- A set of evaluation questions and expected answers are loaded from a JSON file (`evaluation/evaluation_questions.json`).
+- For each question, the chatbot generates an answer and retrieves supporting context.
+- The answer is compared to the expected answer using the above metrics.
+- Results are saved to a CSV file for analysis (`evaluation/result/chatbot_evaluation_results.csv`).
+
+### **Run the Evaluation**
+To run the evaluation, use:
+```bash
+python evaluation/evaluation_test.py
+```
+The results will be printed and saved for further analysis.
+
+
+
+---
+
 ## 📈 Future Improvements
 
 * 🔄 Support for PDFs, DOCX, or Markdown files
