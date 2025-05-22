@@ -1,10 +1,42 @@
 [
-    {
-        "question": "Who is Socrates?",
-        "expected_answer": "Socrates was a classical Greek philosopher credited as one of the founders of Western philosophy."
-    },
-    {
-        "question": "What is the Peloponnesian War?",
-        "expected_answer": "A war between Athens and Sparta that lasted from 431 to 404 BCE."
-    }
+  {
+    "question": "Hi",
+    "expected_answer": "I don't know",
+    "ground_truth_chunk": ""
+  },
+  {
+    "question": "When did the story of Ancient Greece begin?",
+    "expected_answer": "The story begins around 3000 BCE when a group of seafaring people known as the Minoans settled on the island of Crete.",
+    "ground_truth_chunk": "The story begins around 3000 BCE when a group of seafaring people known as the Minoans settled on the island of Crete."
+  },
+  {
+    "question": "Who were the Minoans and where did they settle?",
+    "expected_answer": "The Minoans were an advanced society who settled on the island of Crete.",
+    "ground_truth_chunk": "The story begins around 3000 BCE when a group of seafaring people known as the Minoans settled on the island of Crete. The Minoans were an advanced society, boasting impressive architecture, intricate artwork, and a thriving trade network."
+  },
+  {
+    "question": "What were some achievements of the Minoans?",
+    "expected_answer": "The Minoans were an advanced society, boasting impressive architecture, intricate artwork, and a thriving trade network.",
+    "ground_truth_chunk": "The Minoans were an advanced society, boasting impressive architecture, intricate artwork, and a thriving trade network."
+  },
+  {
+    "question": "Which civilization emerged on the Greek mainland around 1600 BCE?",
+    "expected_answer": "On the mainland, a civilization known as the Mycenaeans emerged around 1600 BCE.",
+    "ground_truth_chunk": "On the mainland, a civilization known as the Mycenaeans emerged around 1600 BCE."
+  },
+  {
+    "question": "How did the Mycenaeans influence Ancient Greece?",
+    "expected_answer": "The Mycenaeans adopted the Minoans' writing system, religious practices, and artistic styles. They constructed fortified cities and engaged in extensive trade, bringing wealth and prosperity to the region.",
+    "ground_truth_chunk": "Influenced by the Minoans, the Mycenaeans adopted their writing system, religious practices, and artistic styles. They constructed fortified cities and engaged in extensive trade, bringing wealth and prosperity to the region."
+  },
+  {
+    "question": "What role did Crete play in the birth of Ancient Greece?",
+    "expected_answer": "Crete served as a cultural hub, but it was not the only significant region in the birth of Ancient Greece.",
+    "ground_truth_chunk": "Crete served as a cultural hub, but it was not the only significant region in the birth of Ancient Greece."
+  },
+  {
+    "question": "What led to the prosperity of the Mycenaeans?",
+    "expected_answer": "Their military prowess, reflected in the famous city of Mycenae, allowed them to dominate the region. They expanded their influence to other parts of the Aegean, establishing colonies and controlling trade routes.",
+    "ground_truth_chunk": "Their military prowess, reflected in the famous city of Mycenae, allowed them to dominate the region. They expanded their influence to other parts of the Aegean, establishing colonies and controlling trade routes."
+  }
 ]
