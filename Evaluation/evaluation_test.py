@@ -24,8 +24,9 @@ EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2")
 LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gpt-4o-mini")
 # You must import or define conversational_rag_chain before this script runs!
 
-def evaluate_rag_chain(eval_json_path="evaluation/evaluation_questions.json", output_csv="result/chatbot_evaluation_results.csv"):
+def evaluate_rag_chain(eval_json_path="evaluation/evaluation_questions.json", output_csv="evaluation/result/chatbot_evaluation_results.csv"):
     # Load evaluation data
+    os.makedirs(os.path.dirname(output_csv), exist_ok=True)
     with open(eval_json_path, "r", encoding="utf-8") as f:
         evaluation_data = json.load(f)
 
