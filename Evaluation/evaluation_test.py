@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv
+import sys
 import pandas as pd
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -9,13 +12,11 @@ from bert_score import score as bert_score
 
 from langchain.evaluation import load_evaluator
 from langchain_openai import ChatOpenAI
-from ..conversational_rag_chain import conversational_rag_chain
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from conversational_rag_chain import conversational_rag_chain
 
-import os
-import re
-from pathlib import Path
-from dotenv import load_dotenv
 load_dotenv()
+
 # --- Configurable paths and model names ---
 FOLDER_PATH = os.getenv("FOLDER_PATH", "data/ancient_greece")
 INDEX_PATH = os.getenv("INDEX_PATH", "faiss_index")
@@ -23,7 +24,7 @@ EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2")
 LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gpt-4o-mini")
 # You must import or define conversational_rag_chain before this script runs!
 
-def evaluate_rag_chain(eval_json_path="evaluation_questions.json", output_csv="result/chatbot_evaluation_results.csv"):
+def evaluate_rag_chain(eval_json_path="evaluation/evaluation_questions.json", output_csv="result/chatbot_evaluation_results.csv"):
     # Load evaluation data
     with open(eval_json_path, "r", encoding="utf-8") as f:
         evaluation_data = json.load(f)
