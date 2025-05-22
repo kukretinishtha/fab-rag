@@ -72,13 +72,17 @@ This will launch a Gradio interface at `http://localhost:7860`.
 ## 📂 Folder Structure
 
 ```
-.
-├── app.py                     # Main chatbot script
+├── app.py                     # gradio app script
+├── conversational_rag_chain.py  # chatbot script
 ├── ancient_greece/        # Text documents go here
-├── faiss_index/               # Auto-generated FAISS index
+├── evaluation/        # evaluation script
+   ├──evaluation_questions.json
+   ├──evaluation_test.py
+      ├──result/chatbot_evaluation_results.csv
 ├── .env                       # Environment variables
 ├── requirements.txt
 └── README.md
+└── notebook.ipynb
 ```
 
 ---
