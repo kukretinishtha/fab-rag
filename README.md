@@ -51,13 +51,13 @@ pip install -r requirements.txt
 ### 4. Create a `.env` File
 
 ```env
-FOLDER_PATH=data/ancient_greece
+FOLDER_PATH=ancient_greece
 INDEX_PATH=faiss_index
 EMBEDDING_MODEL_NAME=all-MiniLM-L6-v2
 LLM_MODEL_NAME=gpt-4o-mini
 ```
 
-Put your `.txt` files in the `data/ancient_greece/` directory.
+Put your `.txt` files in the `ancient_greece/` directory.
 
 ### 5. Run the Application
 
