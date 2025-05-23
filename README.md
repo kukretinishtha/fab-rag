@@ -31,8 +31,8 @@ A context-aware chatbot using Retrieval-Augmented Generation (RAG), built with:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/conversational-rag-chatbot.git
-cd conversational-rag-chatbot
+git clone https://github.com/kukretinishtha/fab-rag
+cd fab-rag
 ````
 
 ### 2. Create and Activate a Virtual Environment
@@ -51,13 +51,13 @@ pip install -r requirements.txt
 ### 4. Create a `.env` File
 
 ```env
-FOLDER_PATH=ancient_greece
+FOLDER_PATH=ancient_greece_data
 INDEX_PATH=faiss_index
 EMBEDDING_MODEL_NAME=all-MiniLM-L6-v2
 LLM_MODEL_NAME=gpt-4o-mini
 ```
 
-Put your `.txt` files in the `ancient_greece/` directory.
+Put your `.txt` files in the `ancient_greece_data` directory.
 
 ### 5. Run the Application
 
@@ -97,7 +97,13 @@ This will launch a Gradio interface at `http://localhost:7860`.
    * Follow-up questions are rewritten into standalone ones.
    * Contextually relevant documents are retrieved.
    * GPT responds using only the retrieved content.
+   * Find the below screenshot for source citation.
+   ## 💻 Demo Screenshot
+   ![source citation in notebook](source_citation.png)
+
+  
 5. **Session History**: Tracked using LangChain’s message history interface.
+   
 
 ---
 
@@ -155,6 +161,19 @@ The chatbot’s answers are rigorously evaluated using both classic NLP metrics 
 - **Context Faithfulness:** Is the answer faithful to the retrieved context and does not introduce information not present in the context?
 - **Relevance:** Judges if the answer is relevant to the question.
 - **Truthfulness:** Assesses factual correctness using a language model.
+
+### 3. **Customer Satisfaction Evaluation**
+
+To assess real-world effectiveness, customer satisfaction was evaluated through user feedback collected during pilot testing. Users were asked to rate their experience based on:
+
+- **Accuracy of Answers:** Did the chatbot provide correct and helpful responses?
+- **Ease of Use:** Was the interface intuitive and easy to interact with?
+- **Context Awareness:** Did the chatbot understand follow-up questions and maintain conversation flow?
+- **Overall Satisfaction:** General impression and likelihood to recommend.
+
+**Feedback Collection Methods:**
+- Post-interaction surveys using a 1–5 star rating system.
+- Open-ended comments for qualitative insights.
 
 ### **How Evaluation Works**
 - A set of evaluation questions and expected answers are loaded from a JSON file (`evaluation/evaluation_questions.json`).
